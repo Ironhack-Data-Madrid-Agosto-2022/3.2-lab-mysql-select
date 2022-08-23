@@ -11,5 +11,5 @@ left join sales as sa
 on t.title_id = sa.title_id
 
 group by a.au_id
-order by TOTAL desc
+order by TOTAL descs
 
