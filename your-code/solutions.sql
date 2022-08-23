@@ -30,7 +30,8 @@ inner join titles
 on titleauthor.title_id=titles.title_id
 left join sales
 on titles.title_id=sales.title_id
-order by qty desc;
+order by qty desc
+limit 3;
 
 
 
