@@ -1,4 +1,4 @@
-select sum(sa.qty) as Total, a.au_id as 'Author ID', a.au_lname as 'Lname', a.au_fname as 'Fname'
+select  sum(sa.qty) as Total, a.au_id as 'Author ID', a.au_lname as 'Lname', a.au_fname as 'Fname', ifnull(sum(qty),0) as Total2
 from authors as a
 
 left join titleauthor as ta
@@ -11,5 +11,5 @@ left join sales as sa
 on t.title_id = sa.title_id
 
 group by a.au_id
-order by TOTAL descs
+order by TOTAL desc
 
